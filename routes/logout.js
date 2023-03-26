@@ -9,7 +9,7 @@ const handleLogout = async (req, res) => {
         const {email, password} = req.body
         // On client, also delete the accessToken
         const cookies = req.cookies;
-        if (!cookies?.jwt) return res.sendStatus(204); //No content
+        if (!cookies.jwt) return res.sendStatus(204); //No content
         const cookiesRefreshToken = cookies.jwt;
 
         // Is refreshToken in any user document in collection?

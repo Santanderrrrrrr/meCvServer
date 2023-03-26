@@ -18,7 +18,7 @@ const getAllUsers = async(req, res)=>{
 
 const updateUser = async(req, res)=>{
     try {
-        if (!req?.body?.id) {
+        if (!req.body.id) {
             return res.status(400).json({ 'message': 'ID parameter is required.' });
         }
         const switchC = req.body.switchCreds
@@ -41,7 +41,7 @@ const updateUser = async(req, res)=>{
     const deleteUser = async(req, res)=>{
         
     try{    
-        if (!req?.body?.id) return res.status(400).json({ 'message': 'User ID required.' });
+        if (!req.body.id) return res.status(400).json({ 'message': 'User ID required.' });
         
         const user = await userModel.findOne({ _id: req.body.id })
         .exec();
@@ -59,7 +59,7 @@ const updateUser = async(req, res)=>{
 const getUser = async (req, res) => {
     try {
         
-        if (!req?.params?.id) return res.status(400).json({ 'message': 'User ID required.' });
+        if (!req.params.id) return res.status(400).json({ 'message': 'User ID required.' });
     
         const user = await userModel.findOne({ _id: req.params.id }).exec();
         if (!user) {

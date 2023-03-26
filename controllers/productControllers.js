@@ -124,7 +124,7 @@ exports.updateProduct = async function(req, res){
 }
 
 exports.deleteProduct = async function(req, res){
-    if (!req?.body?.prodId) return res.status(400).json({ 'message': 'Product ID required.' });
+    if (!req.body.prodId) return res.status(400).json({ 'message': 'Product ID required.' });
     
     const product = await productModel.findOne({ _id: req.body.prodId })
     .exec();
@@ -136,7 +136,7 @@ exports.deleteProduct = async function(req, res){
 }
 
 exports.getProduct = async function(req, res){
-    if (!req?.params?.prodID) return res.status(400).json({ 'message': 'Product ID required.' });
+    if (!req.params.prodID) return res.status(400).json({ 'message': 'Product ID required.' });
 
     const product = await productModel.findOne({ _id: req.params.prodID })
     .populate("sellerId")
