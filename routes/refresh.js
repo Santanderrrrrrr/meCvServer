@@ -7,7 +7,7 @@ require('dotenv').config();
 const handleRefreshToken = async (req, res) => {
     try{
         const cookies = req.cookies;
-        if (!cookies?.jwt) return res.sendStatus(401);
+        if (!cookies?.jwt) {return res.sendStatus(401);}
         const cookiesRefreshToken = cookies.jwt;
 
         const foundUser = await userModel.findOne({refreshToken: cookiesRefreshToken}).exec();
