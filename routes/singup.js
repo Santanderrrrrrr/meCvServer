@@ -24,11 +24,12 @@ const handleNewUser = async (req, res) => {
             _sendMail(email, username)
             res.status(201).json({ 'success': `New user ${username} created!` });
         } catch(e){
-            let msg = e.code==11000? 'user already exists' : `error: ${e.message}`  
-            console.log(`the error is ${e}`)
-            res.status(409).json(msg) //Conflict code
+            let msg = e.code == 11000 ? 'user already exists' : `error: ${e.message}`  
+            console.log(msg)
+            res.status(409).json({'message':msg}) //Conflict code
         }
     } catch (err) {
+        console.log(error.message)
         res.status(500).json({ 'message': err.message });
     }
 }
