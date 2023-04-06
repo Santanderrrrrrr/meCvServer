@@ -1,6 +1,9 @@
 const allowedOrigins = [
     'https://www.me-cv.com',
     'https://www.mecvserver.com/',
+    'https://me-cv.com/',
+    'https://me-cv.com/*',
+    'https://me-cv.com',
     'https://www.mecvserver.com',
     'https://mecvserver.com/',
     'https://mecvserver.com',
