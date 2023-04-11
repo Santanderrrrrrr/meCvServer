@@ -16,6 +16,10 @@ const sectionSchema = new mongoose.Schema(
         ref: "SubSection",
       },
     ],
+    isDeleted: {
+      type: Boolean,
+      default: false
+    }
   },
   { timestamps: true, minimize: false }
 );

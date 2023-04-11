@@ -4,7 +4,7 @@
   "description": "server for the mecv application",
   "main": "server.js",
   "scripts": {
-    "test": "nodemon server.js",
+    "dev": "nodemon server.js",
     "start": "node server.js"
   },
   "author": "Leon Omollo (santanderrrrrrr)",
@@ -26,5 +26,4 @@
     "uuid": "^9.0.0",
     "validator": "^13.7.0"
   }
-
 }

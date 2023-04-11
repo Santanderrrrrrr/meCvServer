@@ -10,15 +10,21 @@ const subSectionSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    content: [{
-      type: String,
-      required: true,
-    }],
+    content: [
+      {
+        type: String,
+        required: true,
+      },
+    ],
     dateFrom: {
       type: Date,
     },
     dateTo: {
       type: Date,
+    },
+    isDeleted: {
+      type: Boolean,
+      default: false,
     },
   },
   { timestamps: true, minimize: false }

@@ -20,6 +20,10 @@ const cvSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    isDeleted: {
+      type: Boolean,
+      default: false
+    }
   },
   { timestamps: true, minimize: false }
 );

@@ -12,7 +12,7 @@
 
 // router.route('/')
 //     .post(productController.createProduct)
-//     .get(productController.getAllProducts)
+    // .get(productController.getAllProducts)
 //     .put(verifMid, productController.updateProduct)
 //     .delete(verifMid, productController.deleteProduct);
     
